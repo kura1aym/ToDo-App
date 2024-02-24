@@ -7,11 +7,9 @@ import android.widget.CheckBox
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.todoapp.TodoItem
-import com.example.todoapp.R
 
-class TodoItemsAdapter(private val todoItems: List<TodoItem>) :
-    RecyclerView.Adapter<TodoItemsAdapter.TodoItemViewHolder>() {
+class TodoListAdapter(var todoItems: List<TodoItem>) :
+    RecyclerView.Adapter<TodoListAdapter.TodoItemViewHolder>() {
 
     inner class TodoItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val checkbox: CheckBox = itemView.findViewById(R.id.checkbox)
@@ -30,9 +28,7 @@ class TodoItemsAdapter(private val todoItems: List<TodoItem>) :
         holder.checkbox.isChecked = currentItem.isDone
         holder.textTask.text = currentItem.description
 
-
         holder.imageButton.setOnClickListener {
-
         }
     }
 
