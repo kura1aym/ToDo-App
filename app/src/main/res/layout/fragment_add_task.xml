@@ -132,8 +132,7 @@
     <ImageButton
         android:id="@+id/textShow"
         android:layout_width="16dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="50dp"
         android:backgroundTint="@color/light_back"
         android:src="@drawable/delete_icon"
         app:layout_constraintStart_toStartOf="parent"
@@ -142,17 +141,17 @@
         android:contentDescription="Delete task"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <TextView
-        android:id="@+id/textDelete"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
         android:gravity="center_vertical|end"
+        app:backgroundTint="@android:color/transparent"
         android:text="Удалить"
         android:textAppearance="@style/Body"
         app:layout_constraintTop_toBottomOf="@+id/line2"
         app:layout_constraintStart_toEndOf="@+id/textShow"
         android:textColor="@color/red" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

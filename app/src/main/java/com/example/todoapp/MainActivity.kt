@@ -14,7 +14,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
     private lateinit var todoListAdapter: TodoListAdapter
-    private val todoItemsRepository = TodoItemsRepository()
+    private val todoItemsRepository = TodoItemsRepository
     private lateinit var navController: NavController
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {

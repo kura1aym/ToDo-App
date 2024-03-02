@@ -23,7 +23,7 @@ class TaskListFragment : Fragment() {
         recyclerView = view.findViewById(R.id.tasks)
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        todoItems = TodoItemsRepository().getAllTodoItems() // Или передайте данные через аргументы
+        todoItems = TodoItemsRepository.getAllTodoItems() // Или передайте данные через аргументы
         todoListAdapter = TodoListAdapter(todoItems)
         recyclerView.adapter = todoListAdapter
 

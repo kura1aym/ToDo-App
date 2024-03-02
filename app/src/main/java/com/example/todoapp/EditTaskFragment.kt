@@ -27,6 +27,18 @@ class EditTaskFragment : Fragment() {
             transaction?.replace(R.id.nav_container, fragment)?.commit()
         }
 
+        val deleteBtn: Button = view.findViewById(R.id.buttonDelete)
+        deleteBtn.setOnClickListener{
+            val editText = view.findViewById<EditText>(R.id.editTask)
+            val textDate = view.findViewById<TextView>(R.id.textDate)
+            val spinner = view.findViewById<Spinner>(R.id.spinner)
+            val switch = view.findViewById<SwitchCompat>(R.id.switchCompat)
+            editText.text.clear()
+            textDate.text = ""
+            spinner.setSelection(0)
+            switch.isChecked = false
+        }
+
         val saveBtn: Button = view.findViewById(R.id.textSave)
         saveBtn.setOnClickListener {
             val editText = view.findViewById<EditText>(R.id.editTask)
@@ -37,7 +49,6 @@ class EditTaskFragment : Fragment() {
             val importance = spinner.selectedItem.toString()
             val date = textDate.text.toString()
 
-            // Create a new TodoItem
             val todoItem = TodoItem(
                 UUID.randomUUID().toString(),
                 task,
@@ -47,17 +58,12 @@ class EditTaskFragment : Fragment() {
                 date
             )
 
-            // Add the TodoItem to the repository
+
             TodoItemsRepository.addTodoItem(todoItem)
 
-            // Notify the adapter (if any) to reflect the changes in the UI
-            // (Implement this part based on your adapter setup)
-
-            // Optionally, clear the input fields or navigate back to the main list
-            editText.text.clear()
-            spinner.setSelection(0)  // Reset the spinner
-            textDate.text = ""
-            // Or navigate back to the main list
+            val fragment = TaskListFragment()
+            val transaction = fragmentManager?.beginTransaction()
+            transaction?.replace(R.id.nav_container, fragment)?.commit()
         }
 
 
