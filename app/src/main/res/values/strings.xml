@@ -3,4 +3,20 @@
     <string name="my_tasks">Мои дела</string>
     <string name="show">Показать</string>
     <string name="completed">Выполнено — 5</string>
+    <string name="save">Сохранить</string>
+    <string name="hind_text_edit_task">Что надо сделать...</string>
+    <string name="importance">Важность</string>
+    <string name="planet_prompt">Choose a planet</string>
+    <string-array name="importance">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
